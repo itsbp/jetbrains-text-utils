@@ -9,3 +9,7 @@
 ## [0.1.1]
 ### Updated
 - Icon
+
+## [Unreleased]
+### Fixes
+- Icon
