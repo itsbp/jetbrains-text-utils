@@ -5,3 +5,7 @@
 ## [0.1.0]
 ### Added
 - Initial release
+
+## [0.1.1]
+### Updated
+- Icon
