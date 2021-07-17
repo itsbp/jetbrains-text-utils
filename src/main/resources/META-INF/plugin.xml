@@ -1,12 +1,13 @@
 <idea-plugin>
-    <id>com.github.itsbp.jetbrainstextutils</id>
-    <name>jetbrains-text-utils</name>
+    <id>com.github.itsbp.textutils</id>
+    <name>Text Utils</name>
+    <description>Simple text Utilities. Sort, De-dupe, base64 encode, base64 decode, convert to uppercase, convert to lowercase</description>
     <vendor>itsbp</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-
+    <!--
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.itsbp.jetbrainstextutils.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.itsbp.jetbrainstextutils.services.MyProjectService"/>
@@ -16,4 +17,43 @@
         <listener class="com.github.itsbp.jetbrainstextutils.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    -->
+    <actions>
+        <!--
+        <action id="com.github.itsbp.jetbrainstextutils.actions.ConvertToLowercase"
+                class="com.github.itsbp.jetbrainstextutils.actions.TextUtilsAction"
+                text="TextUtils: Convert to Lowercase"
+                description="Lowercase selected text"
+                icon="SdkIcons.Sdk_default_icon">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <action id="com.github.itsbp.jetbrainstextutils.actions.ConvertToUppercase"
+                class="com.github.itsbp.jetbrainstextutils.actions.TextUtilsAction"
+                text="TextUtils: Convert to Uppercase"
+                description="Uppercase selected text"
+                icon="SdkIcons.Sdk_default_icon">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <action id="com.github.itsbp.jetbrainstextutils.actions.SortLinesAscending"
+                class="com.github.itsbp.jetbrainstextutils.actions.TextUtilsAction"
+                text="TextUtils: Sort selected lines in Ascending order"
+                description="Sort selected lines in Ascending order"
+                icon="SdkIcons.Sdk_default_icon">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+                    <keyboard-shortcut keymap="$default" first-keystroke="control alt U"/>
+        </action>
+        -->
+        <!--
+      DynamicActionGroup demonstrates declaring an action group without a static action declaration.
+      An action is added to the group programmatically in the DynamicActionGroup implementation.
+    -->
+    <group id="com.github.itsbp.jetbrainstextutils.actions.DynamicActionGroup" class="com.github.itsbp.jetbrainstextutils.actions.DynamicActionGroup"
+           popup="true" text="Text Utils" description="Text Utils(Uppercase, lowercase, base64encode/decode, sort, dedup)"
+           icon="SdkIcons.Sdk_icon"
+           use-shortcut-of="">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+
+    </group>
+    </actions>
+
 </idea-plugin>
