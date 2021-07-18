@@ -18,12 +18,14 @@ Text Utils is a collection of simple text utilities
 
 #### Features
 * Sort lines in selection in Ascending Order
-* Sort lines in selection in Descendign Order
+* Sort lines in selection in Descending Order
 * De-duplicate lines in selection
 * Convert selected text to Uppercase
 * Convert selected text to Lowercase
 * Base64 Encode selected text
 * Base64 Decode selected text 
+
+Also, available for VSCode: https://marketplace.visualstudio.com/items?itemName=itsbp.text-utils
 
 <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
