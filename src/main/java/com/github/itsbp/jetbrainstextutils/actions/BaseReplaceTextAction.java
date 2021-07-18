@@ -38,7 +38,7 @@ abstract public class BaseReplaceTextAction extends AnAction {
         );
 
         // De-select the text range that was just replaced
-        primaryCaret.removeSelection();
+        //primaryCaret.removeSelection();
     }
 
     public abstract String transformSelectedText(String selectedText);
