@@ -50,7 +50,7 @@
     <group id="com.github.itsbp.jetbrainstextutils.actions.DynamicActionGroup" class="com.github.itsbp.jetbrainstextutils.actions.DynamicActionGroup"
            popup="true" text="Text Utils" description="Text Utils(Uppercase, lowercase, base64encode/decode, sort, dedup)"
            icon="SdkIcons.Sdk_icon"
-           use-shortcut-of="">
+    >
       <add-to-group group-id="EditorPopupMenu" anchor="first"/>
 
     </group>
