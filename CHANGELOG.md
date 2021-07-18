@@ -10,8 +10,10 @@
 ### Updated
 - Icon
 
+## [0.1.3]
+### Changed
+- Minor bugfixes
+
 ## [Unreleased]
-## [0.1.2]
-### Fixes
-- Bugfixes
-- Improvements
+### Changed
+- Minor bugfixes

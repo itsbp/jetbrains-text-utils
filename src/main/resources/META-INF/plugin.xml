@@ -1,7 +1,10 @@
 <idea-plugin>
     <id>com.github.itsbp.textutils</id>
-    <name>Text Utils</name>
-    <description>Simple text Utilities. Sort, De-dupe, base64 encode, base64 decode, convert to uppercase, convert to lowercase</description>
+    <name>TextUtils</name>
+    <description>![<![CDATA[
+    Simple text Utilities. Sort, De-dupe, base64 encode, base64 decode, convert to uppercase, convert to lowercase.
+    Keywords: TextUtils, TextUtilities, Text Utilities
+    ]]></description>
     <vendor>itsbp</vendor>
 
     <!-- Product and plugin compatibility requirements -->
