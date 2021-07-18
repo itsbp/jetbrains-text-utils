@@ -7,51 +7,39 @@
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-    <!--
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.itsbp.jetbrainstextutils.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.itsbp.jetbrainstextutils.services.MyProjectService"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.itsbp.jetbrainstextutils.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
-    -->
     <actions>
-        <!--
-        <action id="com.github.itsbp.jetbrainstextutils.actions.ConvertToLowercase"
-                class="com.github.itsbp.jetbrainstextutils.actions.TextUtilsAction"
-                text="TextUtils: Convert to Lowercase"
-                description="Lowercase selected text"
-                icon="SdkIcons.Sdk_default_icon">
-            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-        </action>
-        <action id="com.github.itsbp.jetbrainstextutils.actions.ConvertToUppercase"
-                class="com.github.itsbp.jetbrainstextutils.actions.TextUtilsAction"
-                text="TextUtils: Convert to Uppercase"
-                description="Uppercase selected text"
-                icon="SdkIcons.Sdk_default_icon">
-            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-        </action>
-        <action id="com.github.itsbp.jetbrainstextutils.actions.SortLinesAscending"
-                class="com.github.itsbp.jetbrainstextutils.actions.TextUtilsAction"
-                text="TextUtils: Sort selected lines in Ascending order"
-                description="Sort selected lines in Ascending order"
-                icon="SdkIcons.Sdk_default_icon">
-            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-                    <keyboard-shortcut keymap="$default" first-keystroke="control alt U"/>
-        </action>
-        -->
-        <!--
-      DynamicActionGroup demonstrates declaring an action group without a static action declaration.
-      An action is added to the group programmatically in the DynamicActionGroup implementation.
-    -->
-    <group id="com.github.itsbp.jetbrainstextutils.actions.DynamicActionGroup" class="com.github.itsbp.jetbrainstextutils.actions.DynamicActionGroup"
+
+    <group id="com.github.itsbp.jetbrainstextutils.actions.DynamicActionGroup"
            popup="true" text="Text Utils" description="Text Utils(Uppercase, lowercase, base64encode/decode, sort, dedup)"
            icon="SdkIcons.Sdk_icon"
     >
       <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <add-to-group group-id="EditMenu" anchor="last"/>
+
+
+        <action id="com.github.itsbp.jetbrainstextutils.actions.ConvertToUppercaseAction"
+                class="com.github.itsbp.jetbrainstextutils.actions.ConvertToUppercaseAction" text="Convert to Uppercase"
+                description="Convert to Uppercase">
+            <keyboard-shortcut keymap="$default" first-keystroke="meta alt U" second-keystroke="shift U"/>
+        </action>
+        <action id="com.github.itsbp.jetbrainstextutils.actions.ConvertToLowercaseAction"
+                class="com.github.itsbp.jetbrainstextutils.actions.ConvertToLowercaseAction" text="Convert to Lowercase"
+                description="Convert selected text to Lowercase"/>
+        <action id="com.github.itsbp.jetbrainstextutils.actions.RemoveDuplicatesAction"
+                class="com.github.itsbp.jetbrainstextutils.actions.RemoveDuplicatesAction" text="Remove duplicate lines"
+                description="Remove duplicate lines from selected lines"/>
+        <action id="com.github.itsbp.jetbrainstextutils.actions.SortLinesAscendingAction"
+                class="com.github.itsbp.jetbrainstextutils.actions.SortLinesAscendingAction"
+                text="Sort lines in Ascending order"/>
+        <action id="com.github.itsbp.jetbrainstextutils.actions.SortLinesDescendingAction"
+                class="com.github.itsbp.jetbrainstextutils.actions.SortLinesDescendingAction"
+                text="Sort lines in Descending order"/>
+        <action id="com.github.itsbp.jetbrainstextutils.actions.Base64DecodeAction"
+                class="com.github.itsbp.jetbrainstextutils.actions.Base64DecodeAction" text="Base64 Decode"
+                description="Base64 Decode selected text"/>
+        <action id="com.github.itsbp.jetbrainstextutils.actions.Base64EncodeAction"
+                class="com.github.itsbp.jetbrainstextutils.actions.Base64EncodeAction" text="Base64 Encode"
+                description="Base64 Decode selected text"/>
 
     </group>
     </actions>
