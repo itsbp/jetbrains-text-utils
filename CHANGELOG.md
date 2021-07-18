@@ -12,4 +12,4 @@
 
 ## [Unreleased]
 ### Fixes
-- Icon
+- Bugfixes
