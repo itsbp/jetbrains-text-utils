@@ -11,6 +11,7 @@
 - Icon
 
 ## [Unreleased]
+## [0.1.2]
 ### Fixes
 - Bugfixes
 - Improvements
