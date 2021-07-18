@@ -6,13 +6,10 @@ import com.intellij.openapi.editor.Caret;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.Messages;
-import com.intellij.pom.Navigatable;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
-import java.io.BufferedReader;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collections;
@@ -104,10 +101,6 @@ public class TextUtilsAction extends AnAction {
         e.getPresentation().setEnabledAndVisible(project != null
                 && editor != null
                 && editor.getSelectionModel().hasSelection());
-        if (e.getPlace().equals(ActionPlaces.MAIN_MENU)) {
-            presentation.setText("BP:My Menu item name");
-        } else if (e.getPlace().equals(ActionPlaces.MAIN_TOOLBAR)) {
-            presentation.setText("BP:My Toolbar item name");
-        }
+
     }
 }
