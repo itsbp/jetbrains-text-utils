@@ -3,7 +3,12 @@
 # jetbrains-text-utils Changelog
 ## [Unreleased]
 ### Changed
-- Minor bugfixes
+- Compatibility with new Jetbrains platform version
+
+## [0.1.4]
+### Changed
+- Compatibility with new Jetbrains platform version
+
 
 ## [0.1.3]
 ### Changed
